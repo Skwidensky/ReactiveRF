@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "baseUrl": "./",
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "noImplicitAny": false,
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "strictPropertyInitialization": false,
+        "target": "esnext",
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": false,
+        "noEmit": false,
+        "jsx": "react",
+        "strictNullChecks": false
+    },
+    "include": [
+        "src"
+    ]
+}
