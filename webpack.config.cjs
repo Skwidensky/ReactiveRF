@@ -7,21 +7,30 @@ module.exports = {
     mode: 'development',
     devServer: {
         static: path.join(__dirname, 'dist'),
-        port: 4002,
-        host: '0.0.0.0',
-        proxy: {
-            '^/api/*': {
-                target: 'http://0.0.0.0:4003/api/',
-                secure: false,
-                context: () => true,
-            }
-        },
+        port: 4003,
+        host: '/'
     },
     output: {
-        publicPath: 'http://0.0.0.0:4002/',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
+        fallback: {
+            "utf-8-validate": false,
+            "bufferutil": false,
+            "buffer": false,
+            "fs": false,
+            "tls": false,
+            "net": false,
+            "os": false,
+            "path": false,
+            "zlib": false,
+            "http": false,
+            "https": false,
+            "stream": false,
+            "crypto": false,
+            "crypto-browserify": false, //if you want to use this module also don't forget npm i crypto-browserify 
+        }
     },
     module: {
         rules: [
@@ -42,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html',
+            template: './src/index.html',
         }),
         new webpack.ProvidePlugin({
             process: 'process/browser',
